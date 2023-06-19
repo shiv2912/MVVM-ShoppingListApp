@@ -18,12 +18,14 @@ class ShoppingApplication: Application(), KodeinAware {
         import(androidXModule(this@ShoppingApplication))
         bind() from singleton { ShoppingDatabase(instance()) }
         bind() from singleton {
+
             ShoppingRepository(
                 instance()
             )
         }
         bind() from provider {
             ShoppingViewModelFactory(
+
                 instance()
             )
         }
